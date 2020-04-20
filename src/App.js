@@ -28,12 +28,20 @@ class App extends Component {
   }
 
   render() {
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     return (
       <div className="App">
         <h1> I will be awesome react developer </h1>
         <p> This is really working!! </p>
         {/* passing arrow function to onClick with () will not execute immediately and it will be anonymous function. default param for arrow function here will be an event */}
-        <button onClick={() => this.switchNameHandler('Namrata!!')}> Switch Name </button>
+        <button style={style} onClick={() => this.switchNameHandler('Namrata!!')}> Switch Name </button>
         <Person
           name={this.state.person[0].name}
           age={this.state.person[0].age}
