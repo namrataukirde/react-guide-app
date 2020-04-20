@@ -7,15 +7,20 @@ const app = (props) => {
     person: [
       { name: 'Namrata', age: 28 },
       { name: 'Tushar', age: 27 }
-    ],
-    otherState: 'Hello'
+    ]
   });
+
+  const [otherState, setOtherState] =  useState('another useState');
+
+  console.log(personsState, otherState);
 
   const switchNameHandler = () => {
     setPersonsState({person: [
       { name: 'namya', age: 28 },
       { name: 'T2', age: 27 }
-    ]});
+    ],
+    // otherState: personsState.otherState
+    });
   }
 
   return (
