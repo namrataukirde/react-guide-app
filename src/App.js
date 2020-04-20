@@ -25,7 +25,8 @@ class App extends Component {
       <div className="App">
         <h1> I will be awesome react developer </h1>
         <p> This is really working!! </p>
-        <button onClick={this.switchNameHandler.bind(this, 'Namrata')}> Switch Name </button>
+        {/* passing arrow function to onClick with () will not execute immediately and it will be anonymous function. default param for arrow function here will be an event */}
+        <button onClick={() => this.switchNameHandler('Namrata!!')}> Switch Name </button>
         <Person
           name={this.state.person[0].name}
           age={this.state.person[0].age}
